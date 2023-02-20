@@ -4,7 +4,7 @@ JAVA PROGRAMS:
 2)duplicate characters in a string.
 3)Reverse of string
 4)Reverse of words in given strings
-
+different programs in manner
 
 
 
