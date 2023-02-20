@@ -1,0 +1,768 @@
+JAVA PROGRAMS:
+--------------
+1)length of the string and length of the characters
+2)duplicate characters in a string.
+3)Reverse of string
+4)Reverse of words in given strings
+
+
+
+
+1) Reverse a String = https://bit.ly/3Qa34bn
+2) Generate Fibonacci series = https://bit.ly/3Z7k5Y7
+3) Find largest and smallest in an array = https://bit.ly/3Z1TnA3
+4) Search element in an array = https://bit.ly/3G8LrnS
+5) Sort elements in an array = https://bit.ly/3i8b6VS
+6) How to remove unwanted characters from string = https://bit.ly/3Icqs6m
+7) How to reverse each word = https://bit.ly/3WD4y0w
+8) Find given substring is presence = https://bit.ly/3G6w5jT
+9) How to find duplicates = https://bit.ly/3i5usuD
+10) Static keyword questions = https://bit.ly/3Z5kVEz
+
+
+
+(EP2021CN171918)
+
+shireesha.cheguri1@tcs.com
+mohd.siddiqui1@tcs.com
+
+
+
+
+
+
+
+1)String count program:
+--------------------
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args) {
+     
+		String s="Ramakrishna Yaladri";
+		int count=0;
+		System.out.println("the length of the string: " +s.length());
+		for(int i=0;i<s.length();i++) {
+			if(s.charAt(i)!=' ') {
+				count++;
+			}
+		}
+      System.out.println("the given string count is: " +count);
+	    
+	}
+}
+-------------------------
+2)Fibonacci series:
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args) {
+     
+		int num=8;
+		int n1=0;
+		int n2=0;
+		int n3=1;
+		
+		if(num>0) {
+			for(int i=1;i<num;i++) {
+				System.out.println(n3+ " ");
+				n1=n2;
+				n2=n3;
+				n3=n1+n2;
+			}
+		}
+	    
+	}
+}
+
+---------------------
+3)duplicate values in string :
+                                
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args) {
+     
+		String str="maheshbabu";
+		int length=str.length();
+		char[] ch=str.toCharArray();
+		for(int i=0;i<length;i++) {
+			for(int j=i+1;j<length;j++) {
+				if(ch[i]==ch[j]) {
+					System.out.println("duplicate values are " +ch[j]);
+					break;
+				}
+			}
+		}
+	    
+	}
+}
+
+
+------------------------------
+4)swapping of two numbersin java:
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args) {
+   
+		int x=10;
+		int y=20;
+		
+		x=x+y;
+		y=x-y;
+		x=x-y;
+		
+		System.out.println(x);
+		System.out.println(y);
+		
+	    
+	}
+}
+
+---------------------------------------------
+5)reverse of string using cancatinatin(+) operator
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args) {
+   
+	 String str="Yaladri";
+	 String rev=" ";
+	 int len=str.length();
+	 for(int i=len-1;i>=0;i--) {
+		 rev=rev+str.charAt(i);
+	 }
+	 System.out.println("the reverse of string is:" +rev);
+	    
+	}
+}
+
+-------------------------------
+6)using character array in reverse of string:
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args) {
+   
+	 String str="yaladri";
+	 String rev=" ";
+	 char a[]=str.toCharArray();
+	 int len=a.length;
+	 for(int i=len-1;i>=0;i--) {
+		 rev=rev+a[i];
+	
+	 }
+	 System.out.println("the reverse of string is:" +rev);
+	 
+	    
+	}
+}
+-------------------------------------------
+*)Reverse of words in given strings
+
+package NewProject;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class OopsExamples {
+
+	public static void main(String[] args)
+	{  
+		String str="my name is naveen";
+		String a[]=str.split(" ");
+		for(int i=0;i<a.length;i++) {
+			System.out.print(a[i] + " ");
+		}
+		System.out.println("");
+		for(int i=a.length-1;i>=0;i--) {
+			System.out.print(a[i] + " ");
+		}
+		
+	}  
+}
+-------------------------------
+7)Using stringbuffer class in reverse of string:
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args) {
+   
+	 String str="yaladri";
+	 String rev=" ";
+	 StringBuffer sb=new StringBuffer(str);
+	 System.out.println(sb.reverse());
+	 
+	    
+	}
+}
+
+-----------------------------------------------------
+8)Reverse of numbers
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args) {
+   
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a number");
+    int num=sc.nextInt();
+    int org_num=num;
+    int rev=0;
+    while(num!=0) {
+    	rev=rev*10 + num%10;
+    	num=num/10;
+    	
+    }
+    
+    System.out.println(rev);
+	 
+	    
+	}
+}
+------------------------------------
+9)palindrome number or not
+
+package NewProject;
+
+
+import java.util.Scanner;
+
+public class OopsExamples {
+
+	public static void main(String[] args) {
+   
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a number");
+    int num=sc.nextInt();
+    int org_num=num;
+    int rev=0;
+    while(num!=0) {
+    	rev=rev*10 + num%10;
+    	num=num/10;
+    	}
+    if(org_num==rev) {
+    	System.out.println(org_num+ ":palindrome number");
+    	
+    }
+    else {
+    	System.out.println(org_num+ ":not palindrome number");
+    }
+    
+	 
+	    
+	}
+}
+-----------------------------
+10)given string "hello world" print the l place 123 numbers:
+
+
+package NewProject;
+
+public class OopsExamples {
+
+	public static void main(String[] args) {  
+        String string = "hello world";  
+  
+       
+       
+  
+       int j=1;
+        for(int i = 0; i < string.length(); i++){  
+        	
+        	if(string.charAt(i)=='l') {
+        		
+        		System.out.print(j+ " "); 
+        		
+        		j++;
+        		
+        	}else {
+        		System.out.print(string.charAt(i) + " "); 
+        	}
+             
+        }  
+    }  
+}
+
+
+
+
+
+
+package NewProject;
+
+public class OopsExamples {
+
+	public static void main(String[] args) {  
+        
+	String str = "helloworld";
+        char ch = 'l';
+        int cnt = 0;
+         
+        for ( int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ch)
+                cnt++;
+        }
+        System.out.println("Occurrences of "+ch+" are " +cnt);
+    }  
+}
+
+
+----------------------------------
+Collections:
+Arraylist -:
+
+Ex:-
+package NewProject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class OopsExamples {
+
+	public static void main(String[] args) {  
+        
+		List<String> li=new ArrayList<String>();
+		
+		li.add("Java");
+		li.add("selenium");
+		li.add("maven");
+		li.add("testng");
+		li.add("github");
+		
+		//fetch the data
+		System.out.println("the item is ::" +li.get(0));
+		
+		//all the data to fetch
+		for(int i=0;i<li.size();i++) {
+			System.out.println("Element at"+i+"and data is: " +li.get(i));
+		}
+		
+		//Another way to fetch the  data
+		System.out.println("-------------Iterator------------");
+		java.util.Iterator<String> it=li.iterator();
+		while(it.hasNext()) {
+			System.out.println("Data is:" +it.next());
+		}
+		
+		
+		
+    }  
+}
+
+------------------------------------
+Set:
+Hash Set:
+
+package NewProject;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class OopsExamples {
+
+	public static void main(String[] args) {  
+		
+		Set<Integer> se=new HashSet<Integer>();
+		se.add(10);
+		se.add(20);
+		se.add(30);
+		se.add(40);
+		se.add(40);
+		se.add(40);
+		se.add(50);
+		Iterator it=se.iterator();
+		while(it.hasNext()) {
+			System.out.println("the data is: "+it.next());
+		}
+        
+		    }  
+}
+
+
+------------------
+Map
+
+HashMap:
+
+package NewProject;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class OopsExamples {
+
+	public static void main(String[] args) {  
+		Map<String,String> m=new HashMap<String,String>();
+		m.put("name", "Yaladri");
+		m.put("url", "onlinetesting.com");
+		m.put("tutor", "testing");
+		m.put("Myloc", "hyderabad");
+		
+		System.out.println("the value is: "+m.get("name"));
+		for(Map.Entry<String,String> data :m.entrySet()) {
+			
+			System.out.println("the key is:" +data.getKey()+"the value is:"+data.getValue());
+			
+			
+			
+		}
+		
+		    }  
+}
+
+---------------------------------------------
+string split 
+print in seperate strings  
+
+Eg:
+
+package NewProject;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class OopsExamples {
+
+	public static void main(String[] args)
+	{  
+		String s="Ramakrishna Yaladri Venkey";
+		String sarrty[]=s.split(" ");
+		int count=0;
+		for(int i=0;i<sarrty.length;i++) {
+			
+			count++;
+			System.out.println(sarrty[i]);
+			
+		}
+		System.out.println(count);
+		
+	}  
+}
+
+
+----------------------------
+CharAt(Method) in java:
+
+Eg:
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args)
+	{  
+		String str="Ramakrishna";
+		char ch=str.charAt(10);
+		System.out.println(ch);
+																																																	
+	}  
+}
+
+
+----------------------------------
+compareTo() Method:
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args)
+	{  
+		String str1="hello";
+		String str2="hello";
+		System.out.println(str1.compareTo(str2));
+																																																	
+	}  
+}
+
+
+---------------------------------------
+Prime numbers program:
+
+Eg:
+package NewProject;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class OopsExamples {
+
+	public static void main(String[] args)
+	{  
+		int num=5;
+		int count=0;
+		if(num>1) {
+			for(int i=1;i<num;i++) {
+				if(num%i ==0) 
+					count++;
+			}
+				
+				if(count==2) {
+					System.out.println("prime number");
+				}
+				else
+				{
+					System.out.println("not a prime number");
+				}
+			}
+			else 
+			{
+			
+			System.out.println("not a prime number");
+			
+		}
+		
+			
+		}
+	}
+
+--------------------------------
+Find largest number in an array using forloop:
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args)
+	{  
+		int arr[]= {1,2,56,899,256};
+		int maxnumber=arr[0];
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]>maxnumber) {
+				maxnumber=arr[i];
+				
+			}
+		}
+        System.out.println("the largest number: " +maxnumber);		
+		
+			
+		}
+	}
+------------------------------
+Find smallest number in an array
+
+package NewProject;
+public class OopsExamples {
+
+	public static void main(String[] args)
+	{  
+		int arr[]= {1,2,56,899,256};
+		int minnumber=arr[0];
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]<minnumber) {
+				minnumber=arr[i];
+				
+			}
+		}
+        System.out.println("the largest number: " +minnumber);		
+		
+			
+		}
+	}
+
+
+-------------------------------------------
+Constructor:
+
+public class Practies1 {
+	
+	
+		int a;
+		String b;
+		Practies1(int c,String d){
+			a=c;
+			d=b;
+			
+		}
+		
+        
+
+		public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Practies1 p1=new Practies1(45,"Yaladri");
+		Practies1 p2=new Practies1(46,"Ramakrishna");
+		System.out.println(p1.a+p1.b);
+		System.out.println(p2.a+p2.b);
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hi
+
+This is Yaladri Rachabanti My EP Number (EP2021CN171918)
+May know when i will get the onboarding link? still portal also not changed in joining date 
+
+     
+	
+
+
+
+
+
+Apply Now Reply
+
+Dear Yaladri R,
+
+
+
+in xpath having 14 elements in the same attribute name we need to write the indexing.
+
+(//a[@class="otherProdIconTitle"])[4]
+
+
+     
+	
+
+1)encapsulation
+2)abstraction
+3)interface
+4)constructror
+5)collections
+6)test ng
+7)project structure
+8)roles and responsibilities
+9)day to day activities
+
+
+
+1)GIT
+2)Collections
+3)oops concepts
+4)Roles and Responsibilities
+5)Testng
+6)jira
+7)Agile
+8)jenkins
+9)programs
+
+
+
+
+
+     //div[@class="FPdoLc lJ9FBc"]//input[@class="RNmpXc"]
+C:\Users\ramak\git\sample
+
+     
+	
+202539
+
+
+     
+	
+
+
+     
+	
+
+
+
+	
+
+
+	
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+	
+
+
+	
+
+
+	
+
+
+
+
+
+	
+
+
+	
+
+
